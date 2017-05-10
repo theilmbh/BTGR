@@ -26,9 +26,19 @@ Camera::~Camera()
 
 }
 
+void Camera::set_position(pos_t new_pos)
+{
+	position = new_pos;
+}
+
+void Camera::set_orientation(orient_t new_orient)
+{
+	orientation = new_orient;
+}
+
 ray_vec_t* Camera::get_frame_rays(int frame_num)
 {
-
+	// Essentially this returns the initial conditions for the frame rays
 	for(int i=0; i<h_res; i++)
 	{
 		for(int j=0; j<v_res; j++)

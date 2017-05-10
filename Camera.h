@@ -27,6 +27,8 @@ public:
 	Camera();
 	Camera(double f, double arat, double s, int hres);
 	~Camera();
+	void set_position(pos_t new_pos);
+	void set_orientation(orient_t new_orient);
 	ray_vec_t* get_frame_rays(int frame);
 
 };
